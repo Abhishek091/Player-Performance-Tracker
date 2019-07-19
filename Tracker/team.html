@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+
+
+
+.progress-container {
+  width: 25%;
+  height: 8px;
+  background: #ccc;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #4caf50;
+  width: 0%;
+}
+
+.content {
+  padding: 22px 0;
+  margin: 50px auto 0 auto;
+  width: 80%;
+}
+
+table {
+    width:25%;
+}
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+   background-color: #fff;
+}
+
+table#t01 th {
+    background-color: black;
+    color: white;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>  
+</div>
+
+<div class="content">
+  
+
+<br>
+
+
+<table id="t01">
+  <tr>
+    <th>MONTH</th>
+    <th>SERIES NAME</th>
+  </tr>
+  
+  <tr>
+    <td>1</td>
+    <td>INDIA</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>INDIA</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>INDIA</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>INDIA</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>INDIA</td>
+  </tr>
+   <tr>
+    <td>1</td>
+    <td>INDIA</td>
+  </tr>
+   <tr>
+    <td>1</td>
+    <td>INDIA</td>
+  </tr>
+   <tr>
+    <td>1</td>
+    <td>INDIA</td>
+  </tr>
+  </table>
+  
+</div>
+
+<script>
+// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+</script>
+
+</body>
+</html> 
